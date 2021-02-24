@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is an event handling with Java Script</h1>
+    <button id="first">Click me-1</button>
+    <button id="second">Click me-2</button>
+    <button id="third">Click me-3</button>
+    <button id="fourth">Click me-4</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+      asperiores.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+      molestias.
+    </p>
+    <article>lorem2</article>
+    <article>lorem2</article>
+
+
+
+
+    <script>
+        function clickHandling(){
+            document.body.style.backgroundColor="green";
+        }
+
+        var first = document.getElementById('first');
+        first.onclick= function(){
+            document.body.style.backgroundColor="tomato";
+        }
+        var second= document.getElementById("second");
+        second.onclick= clickHandling;
+
+        var third = document.getElementById("third");
+        third.addEventListener("click",function(){
+            document.body.style.backgroundColor="cyan";
+        });
+
+        document.getElementById("fourth").addEventListener('click',function(){
+            document.body.style.backgroundColor="yellow";
+        });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="name">Name:</h1>
+    <ul id="name-list">
+
+    </ul>
+
+    <script>
+      fetch("https://randomuser.me/api/?results=10")
+        .then((response) => response.json())
+
+        .then((data) => {
+            const ul = document.getElementById("name-list");
+          for (let i = 0; i < data.results.length; i++) {
+           
+            const name = data.results[i].name;
+            const fullName = `${name.title} ${name.first} ${name.last}`;
+            const li =  document.createElement("li");
+            li.innerText= fullName;
+            ul.appendChild(li);
+
+
+            // document.getElementById("name").innerText = fullName;
+          }
+          // const name = data.results[0].name;
+          // const fullName = `${name.title} ${name.first} ${name.last}`;
+          // console.log(fullName);
+        });
+    </script>
+  </body>
+</html>

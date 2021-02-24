@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Exploring</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, perferendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, expedita.</p>
+    <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatum repellendus amet debitis eligendi doloremque aliquid vel eaque impedit reiciendis?</p>
+    <article class="another-special">
+        <h3 class="author">author 1</h3>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, doloribus?</p>
+    </article>
+    <article class="special">
+        <h3 class="author">author 2</h3>
+        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, nesciunt!</p>
+    </article>
+    <article class="special">
+        <h3 class="author">author 3</h3>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, illo?</p>
+    </article>
+
+
+
+     <article>
+      <h3 id="extra">this is a new article </h3>
+      <ul id="list">
+          <li>this is 1</li>
+          <li>this is 2</li>
+          <li>this is 3</li>
+      </ul>
+
+     </article>    
+     <script>
+       var authors = document.getElementsByClassName("author");
+       for(var i=0;i<authors.length;i++){
+           var element = authors[i];
+           element.style.backgroundColor="red";
+           element.style.fontSize ="50px";
+        console.log("element.innerHTML");
+        element.innerHTML= "valobasa " + (i+1);
+           
+
+                   
+       }
+       document.body.style.backgroundColor="tomato";
+       var selectors = document.querySelectorAll(".special h3");
+      for(var i=0;i<selectors.length;i++){
+          var element = selectors[i];
+          element.style.backgroundColor="blue";
+          element.setAttribute("title","amr shob troydo sotta ");
+          element.style.fontSize ="70px";
+
+      }
+      const list = document.getElementById("list");
+      const newList = document.createElement('li');
+      newList.innerHTML="GIft list added by java script";
+      list.appendChild(newList);
+
+      const remove = document.getElementById("extra");
+      remove.remove();
+
+     </script>
+</body>
+</html>

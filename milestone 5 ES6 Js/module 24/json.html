@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON = JavaScript Object Notation</h1>
+    <h2>JSON used to call backend by API.</h2>
+    <script>
+        const user = {name:"shawon",id:124};
+        const jsonUser = JSON.stringify(user);// when data sending to backend we must convert it to json stringify
+         console.log(jsonUser);//{"name":"shawon","id":124} convert as a string 
+
+         const userJson = JSON.parse(jsonUser);
+         console.log(userJson);//json.html:17 {name: "shawon", id: 124} converted to object real form
+    </script>
+</body>
+</html>

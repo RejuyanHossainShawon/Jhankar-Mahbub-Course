@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+    <h1>This is a list</h1>
+    <ul id="mylist">
+        <li id="first" class="item">
+            <p>this is list1</p>
+        </li>
+        <li class="item">
+            <p>this is list2</p>
+        </li>
+        <li class="item">
+            <p>this is list3</p>
+        </li>
+        <li class="item">
+            <p>this is list4</p>
+        </li>
+        <li class="item">
+            <p>this is list5</p>
+        </li>
+        <li class="item">
+            <p>this is list6</p>
+        </li>
+        <li class="item">
+            <p>this is list7</p>
+        </li>
+        <li class="item">
+            <p>this is list8</p>
+        </li>
+        <li class="item">
+            <p>this is list9</p>
+        </li>
+    </ul>
+</div>
+    <script>
+        document.getElementById("first").addEventListener('click',function(){
+            console.log("First list is clicked");
+            event.stopImmediatePropagation();
+        })
+        document.getElementById("mylist").addEventListener('click',function(){
+            console.log("mylist is clicked");
+            event.stopPropagation();
+        })
+        document.getElementById("container").addEventListener("click",function(){
+            console.log("container is clicked");
+        })
+    </script>
+</body>
+</html>
